@@ -1,0 +1,481 @@
+CRITICAL - 2024-05-21 05:38:47 --> ErrorException: Undefined array key "role"
+[Method: GET, Route: anasayfa]
+in APPPATH/Controllers/AuthController.php on line 280.
+ 1 APPPATH/Controllers/AuthController.php(280): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "role"', '/Users/argin/Documents/ODEV/admin-panel/app/Controllers/AuthController.php', 280)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->DemirbasPage()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+ERROR - 2024-05-21 05:51:55 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for ouzka.design failed: nodename nor servname provided, or not known in /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', '/Users/argin/Do...', 186)
+#1 /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php(186): mysqli->real_connect('ouzka.design', 'argininf1_odev', Object(SensitiveParameterValue), 'argininf1_odev', 3306, '', 0)
+#2 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#4 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 /Users/argin/Documents/ODEV/admin-panel/system/Model.php(919): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/argin/Documents/ODEV/admin-panel/app/Models/Admin.php(62): CodeIgniter\Model->__call('get', Array)
+#7 /Users/argin/Documents/ODEV/admin-panel/app/Controllers/AuthController.php(109): App\Models\Admin->verifyAdmin('admin@panel.com', '1234')
+#8 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+#9 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#10 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /Users/argin/Documents/ODEV/admin-panel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 /Users/argin/Documents/ODEV/admin-panel/system/Commands/Server/rewrite.php(49): require_once('/Users/argin/Do...')
+#15 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for ouzka.design failed: nodename nor servname provided, or not known in /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php(186): mysqli->real_connect('ouzka.design', 'argininf1_odev', Object(SensitiveParameterValue), 'argininf1_odev', 3306, '', 0)
+#1 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/argin/Documents/ODEV/admin-panel/system/Model.php(919): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/argin/Documents/ODEV/admin-panel/app/Models/Admin.php(62): CodeIgniter\Model->__call('get', Array)
+#6 /Users/argin/Documents/ODEV/admin-panel/app/Controllers/AuthController.php(109): App\Models\Admin->verifyAdmin('admin@panel.com', '1234')
+#7 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+#8 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/argin/Documents/ODEV/admin-panel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/argin/Documents/ODEV/admin-panel/system/Commands/Server/rewrite.php(49): require_once('/Users/argin/Do...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for ouzka.design failed: nodename nor servname provided, or not known in /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/argin/Documents/ODEV/admin-panel/system/Model.php(919): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/argin/Documents/ODEV/admin-panel/app/Models/Admin.php(62): CodeIgniter\Model->__call('get', Array)
+#5 /Users/argin/Documents/ODEV/admin-panel/app/Controllers/AuthController.php(109): App\Models\Admin->verifyAdmin('admin@panel.com', '1234')
+#6 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+#7 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/argin/Documents/ODEV/admin-panel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/argin/Documents/ODEV/admin-panel/system/Commands/Server/rewrite.php(49): require_once('/Users/argin/Do...')
+#13 {main}
+CRITICAL - 2024-05-21 05:51:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for ouzka.design failed: nodename nor servname provided, or not known
+[Method: POST, Route: giris/kontrol]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admins`
+WHERE `email` = :email:', [...], false)
+ 3 SYSTEMPATH/Model.php(919): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH/Models/Admin.php(62): CodeIgniter\Model->__call('get', [])
+ 5 APPPATH/Controllers/AuthController.php(109): App\Models\Admin->verifyAdmin('admin@panel.com', '1234')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 07:29:15 --> Error: Class "App\Models\Mesaj" not found
+[Method: POST, Route: mesajlar]
+in APPPATH/Controllers/AuthController.php on line 455.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->MesajPage()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 07:29:40 --> Error: Class "App\Models\Mesaj" not found
+[Method: POST, Route: mesajlar]
+in APPPATH/Controllers/AuthController.php on line 455.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->MesajPage()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 07:50:59 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "CİKİS"
+[Method: GET, Route: C%C4%B0K%C4%B0S]
+in SYSTEMPATH/Router/Router.php on line 736.
+ 1 SYSTEMPATH/Router/Router.php(203): CodeIgniter\Router\Router->checkDisallowedChars('CİKİS')
+ 2 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle('CİKİS')
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 08:04:12 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: anasayfa]
+in APPPATH/Config/Routes.php on line 43.
+ 1 APPPATH/Config/Routes.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', '/Users/argin/Documents/ODEV/admin-panel/app/Config/Routes.php', 43)
+ 2 SYSTEMPATH/Router/RouteCollection.php(340): require('/Users/argin/Documents/ODEV/admin-panel/app/Config/Routes.php')
+ 3 SYSTEMPATH/CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 08:08:49 --> Error: Cannot use object of type CodeIgniter\Session\Session as array
+[Method: GET, Route: anasayfa]
+in SYSTEMPATH/Session/Session.php on line 496.
+ 1 APPPATH/Config/Routes.php(47): CodeIgniter\Session\Session->get('role')
+ 2 SYSTEMPATH/Router/RouteCollection.php(340): require('/Users/argin/Documents/ODEV/admin-panel/app/Config/Routes.php')
+ 3 SYSTEMPATH/CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 08:08:59 --> Error: Cannot use object of type CodeIgniter\Session\Session as array
+[Method: GET, Route: /]
+in SYSTEMPATH/Session/Session.php on line 496.
+ 1 APPPATH/Config/Routes.php(47): CodeIgniter\Session\Session->get('role')
+ 2 SYSTEMPATH/Router/RouteCollection.php(340): require('/Users/argin/Documents/ODEV/admin-panel/app/Config/Routes.php')
+ 3 SYSTEMPATH/CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 08:10:02 --> Error: Cannot use object of type CodeIgniter\Session\Session as array
+[Method: GET, Route: /]
+in SYSTEMPATH/Session/Session.php on line 496.
+ 1 APPPATH/Config/Routes.php(47): CodeIgniter\Session\Session->get('role')
+ 2 SYSTEMPATH/Router/RouteCollection.php(340): require('/Users/argin/Documents/ODEV/admin-panel/app/Config/Routes.php')
+ 3 SYSTEMPATH/CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 08:13:06 --> ErrorException: Undefined property: stdClass::$email
+[Method: GET, Route: anasayfa]
+in APPPATH/Views/duyurular_user.php on line 172.
+ 1 APPPATH/Views/duyurular_user.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$email', '/Users/argin/Documents/ODEV/admin-panel/app/Views/duyurular_user.php', 172)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/argin/Documents/ODEV/admin-panel/app/Views/duyurular_user.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('duyurular_user', [], true)
+ 5 APPPATH/Controllers/AuthController.php(487): view('duyurular_user', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->UserDuyuru()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 08:13:24 --> Error: Object of class stdClass could not be converted to string
+[Method: GET, Route: anasayfa]
+in APPPATH/Views/duyurular_user.php on line 167.
+ 1 SYSTEMPATH/View/View.php(234): include()
+ 2 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('duyurular_user', [], true)
+ 4 APPPATH/Controllers/AuthController.php(487): view('duyurular_user', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->UserDuyuru()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 08:13:36 --> ErrorException: Undefined property: stdClass::$email
+[Method: GET, Route: anasayfa]
+in APPPATH/Views/duyurular_user.php on line 173.
+ 1 APPPATH/Views/duyurular_user.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$email', '/Users/argin/Documents/ODEV/admin-panel/app/Views/duyurular_user.php', 173)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/argin/Documents/ODEV/admin-panel/app/Views/duyurular_user.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('duyurular_user', [], true)
+ 5 APPPATH/Controllers/AuthController.php(487): view('duyurular_user', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->UserDuyuru()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 08:13:43 --> ParseError: syntax error, unexpected token "exit"
+[Method: GET, Route: anasayfa]
+in APPPATH/Views/duyurular_user.php on line 167.
+ 1 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('duyurular_user', [], true)
+ 3 APPPATH/Controllers/AuthController.php(487): view('duyurular_user', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->UserDuyuru()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+ERROR - 2024-05-21 08:14:22 --> mysqli_sql_exception: Unknown column 'd.email' in 'field list' in /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php(308): mysqli->query('SELECT *, d.ema...', 0)
+#1 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, d.ema...')
+#2 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, d.ema...')
+#3 /Users/argin/Documents/ODEV/admin-panel/app/Controllers/AuthController.php(483): CodeIgniter\Database\BaseConnection->query('SELECT *, d.ema...')
+#4 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(933): App\Controllers\AuthController->UserDuyuru()
+#5 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#6 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 /Users/argin/Documents/ODEV/admin-panel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 /Users/argin/Documents/ODEV/admin-panel/system/Commands/Server/rewrite.php(49): require_once('/Users/argin/Do...')
+#11 {main}
+CRITICAL - 2024-05-21 08:14:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'd.email' in 'field list'
+[Method: GET, Route: anasayfa]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 APPPATH/Controllers/AuthController.php(483): CodeIgniter\Database\BaseConnection->query('SELECT *, d.email FROM duyuru d LEFT JOIN admins a ON a.id=d.created_by ORDER BY id DESC;')
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->UserDuyuru()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 08:14:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'd.email' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, d.email FROM duyuru d LEFT JOIN admins a ON a.id=d.created_by ORDER BY id DESC;')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, d.email FROM duyuru d LEFT JOIN admins a ON a.id=d.created_by ORDER BY id DESC;')
+ 3 APPPATH/Controllers/AuthController.php(483): CodeIgniter\Database\BaseConnection->query('SELECT *, d.email FROM duyuru d LEFT JOIN admins a ON a.id=d.created_by ORDER BY id DESC;')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->UserDuyuru()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 08:14:22 --> [Caused by] mysqli_sql_exception: Unknown column 'd.email' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('SELECT *, d.email FROM duyuru d LEFT JOIN admins a ON a.id=d.created_by ORDER BY id DESC;', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, d.email FROM duyuru d LEFT JOIN admins a ON a.id=d.created_by ORDER BY id DESC;')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, d.email FROM duyuru d LEFT JOIN admins a ON a.id=d.created_by ORDER BY id DESC;')
+ 4 APPPATH/Controllers/AuthController.php(483): CodeIgniter\Database\BaseConnection->query('SELECT *, d.email FROM duyuru d LEFT JOIN admins a ON a.id=d.created_by ORDER BY id DESC;')
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->UserDuyuru()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+ERROR - 2024-05-21 08:14:41 --> mysqli_sql_exception: Column 'id' in order clause is ambiguous in /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php(308): mysqli->query('SELECT *, a.ema...', 0)
+#1 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, a.ema...')
+#2 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, a.ema...')
+#3 /Users/argin/Documents/ODEV/admin-panel/app/Controllers/AuthController.php(483): CodeIgniter\Database\BaseConnection->query('SELECT *, a.ema...')
+#4 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(933): App\Controllers\AuthController->UserDuyuru()
+#5 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#6 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 /Users/argin/Documents/ODEV/admin-panel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 /Users/argin/Documents/ODEV/admin-panel/system/Commands/Server/rewrite.php(49): require_once('/Users/argin/Do...')
+#11 {main}
+CRITICAL - 2024-05-21 08:14:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id' in order clause is ambiguous
+[Method: GET, Route: anasayfa]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 APPPATH/Controllers/AuthController.php(483): CodeIgniter\Database\BaseConnection->query('SELECT *, a.email FROM duyuru d LEFT JOIN admins a ON a.id=d.created_by ORDER BY id DESC;')
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->UserDuyuru()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 08:14:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id' in order clause is ambiguous
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, a.email FROM duyuru d LEFT JOIN admins a ON a.id=d.created_by ORDER BY id DESC;')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, a.email FROM duyuru d LEFT JOIN admins a ON a.id=d.created_by ORDER BY id DESC;')
+ 3 APPPATH/Controllers/AuthController.php(483): CodeIgniter\Database\BaseConnection->query('SELECT *, a.email FROM duyuru d LEFT JOIN admins a ON a.id=d.created_by ORDER BY id DESC;')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->UserDuyuru()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 08:14:41 --> [Caused by] mysqli_sql_exception: Column 'id' in order clause is ambiguous
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('SELECT *, a.email FROM duyuru d LEFT JOIN admins a ON a.id=d.created_by ORDER BY id DESC;', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, a.email FROM duyuru d LEFT JOIN admins a ON a.id=d.created_by ORDER BY id DESC;')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, a.email FROM duyuru d LEFT JOIN admins a ON a.id=d.created_by ORDER BY id DESC;')
+ 4 APPPATH/Controllers/AuthController.php(483): CodeIgniter\Database\BaseConnection->query('SELECT *, a.email FROM duyuru d LEFT JOIN admins a ON a.id=d.created_by ORDER BY id DESC;')
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->UserDuyuru()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 08:15:39 --> ErrorException: Undefined property: stdClass::$email
+[Method: GET, Route: anasayfa]
+in APPPATH/Views/duyurular_user.php on line 172.
+ 1 APPPATH/Views/duyurular_user.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$email', '/Users/argin/Documents/ODEV/admin-panel/app/Views/duyurular_user.php', 172)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/argin/Documents/ODEV/admin-panel/app/Views/duyurular_user.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('duyurular_user', [], true)
+ 5 APPPATH/Controllers/AuthController.php(487): view('duyurular_user', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->UserDuyuru()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 08:15:42 --> ErrorException: Undefined property: stdClass::$email
+[Method: GET, Route: anasayfa]
+in APPPATH/Views/duyurular_user.php on line 172.
+ 1 APPPATH/Views/duyurular_user.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$email', '/Users/argin/Documents/ODEV/admin-panel/app/Views/duyurular_user.php', 172)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/argin/Documents/ODEV/admin-panel/app/Views/duyurular_user.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('duyurular_user', [], true)
+ 5 APPPATH/Controllers/AuthController.php(487): view('duyurular_user', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->UserDuyuru()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 08:45:44 --> ErrorException: Undefined property: stdClass::$content
+[Method: GET, Route: mesajlar]
+in APPPATH/Views/mesajlar_user.php on line 227.
+ 1 APPPATH/Views/mesajlar_user.php(227): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$content', '/Users/argin/Documents/ODEV/admin-panel/app/Views/mesajlar_user.php', 227)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/argin/Documents/ODEV/admin-panel/app/Views/mesajlar_user.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('mesajlar_user', [], true)
+ 5 APPPATH/Controllers/AuthController.php(526): view('mesajlar_user', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->MesajlarUserPage()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 08:46:15 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: mesajlar]
+in APPPATH/Controllers/AuthController.php on line 524.
+ 1 APPPATH/Controllers/AuthController.php(524): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', '/Users/argin/Documents/ODEV/admin-panel/app/Controllers/AuthController.php', 524)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->MesajlarUserPage()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 08:46:29 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: mesajlar]
+in APPPATH/Controllers/AuthController.php on line 524.
+ 1 APPPATH/Controllers/AuthController.php(524): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', '/Users/argin/Documents/ODEV/admin-panel/app/Controllers/AuthController.php', 524)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->MesajlarUserPage()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 10:21:05 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::updateUserPassword()
+[Method: POST, Route: sifre]
+in APPPATH/Controllers/AuthController.php on line 573.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->SifreDegistirPage()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+ERROR - 2024-05-21 10:45:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'UNION ALL
+                    SELECT *, 'admin' as role FROM admins ORDER BY id ' at line 2 in /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php(308): mysqli->query('\n              ...', 0)
+#1 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\n              ...')
+#2 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\n              ...')
+#3 /Users/argin/Documents/ODEV/admin-panel/app/Controllers/AuthController.php(164): CodeIgniter\Database\BaseConnection->query('\n              ...')
+#4 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(933): App\Controllers\AuthController->addUserPage()
+#5 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#6 /Users/argin/Documents/ODEV/admin-panel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 /Users/argin/Documents/ODEV/admin-panel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 /Users/argin/Documents/ODEV/admin-panel/system/Commands/Server/rewrite.php(49): require_once('/Users/argin/Do...')
+#11 {main}
+CRITICAL - 2024-05-21 10:45:23 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'UNION ALL
+                    SELECT *, 'admin' as role FROM admins ORDER BY id ' at line 2
+[Method: GET, Route: kullanicilar]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 APPPATH/Controllers/AuthController.php(164): CodeIgniter\Database\BaseConnection->query('
+                    SELECT *, \'user\' as role FROM users ORDER BY id DESC
+                    UNION ALL
+                    SELECT *, \'admin\' as role FROM admins ORDER BY id DESC;
+                ')
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->addUserPage()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 10:45:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'UNION ALL
+                    SELECT *, 'admin' as role FROM admins ORDER BY id ' at line 2
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+                    SELECT *, \'user\' as role FROM users ORDER BY id DESC
+                    UNION ALL
+                    SELECT *, \'admin\' as role FROM admins ORDER BY id DESC;
+                ')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+                    SELECT *, \'user\' as role FROM users ORDER BY id DESC
+                    UNION ALL
+                    SELECT *, \'admin\' as role FROM admins ORDER BY id DESC;
+                ')
+ 3 APPPATH/Controllers/AuthController.php(164): CodeIgniter\Database\BaseConnection->query('
+                    SELECT *, \'user\' as role FROM users ORDER BY id DESC
+                    UNION ALL
+                    SELECT *, \'admin\' as role FROM admins ORDER BY id DESC;
+                ')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->addUserPage()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-21 10:45:23 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'UNION ALL
+                    SELECT *, 'admin' as role FROM admins ORDER BY id ' at line 2
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('
+                    SELECT *, \'user\' as role FROM users ORDER BY id DESC
+                    UNION ALL
+                    SELECT *, \'admin\' as role FROM admins ORDER BY id DESC;
+                ', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+                    SELECT *, \'user\' as role FROM users ORDER BY id DESC
+                    UNION ALL
+                    SELECT *, \'admin\' as role FROM admins ORDER BY id DESC;
+                ')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+                    SELECT *, \'user\' as role FROM users ORDER BY id DESC
+                    UNION ALL
+                    SELECT *, \'admin\' as role FROM admins ORDER BY id DESC;
+                ')
+ 4 APPPATH/Controllers/AuthController.php(164): CodeIgniter\Database\BaseConnection->query('
+                    SELECT *, \'user\' as role FROM users ORDER BY id DESC
+                    UNION ALL
+                    SELECT *, \'admin\' as role FROM admins ORDER BY id DESC;
+                ')
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->addUserPage()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')

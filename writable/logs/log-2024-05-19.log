@@ -1,0 +1,426 @@
+ERROR - 2024-05-19 00:06:44 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'argininf1_odev'@'176.232.236.130' (using password: YES) in /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php(186): mysqli->real_connect('ouzka.design', 'argininf1_odev', Object(SensitiveParameterValue), 'argininf1_odev', 3306, '', 0)
+#1 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(1471): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(1490): CodeIgniter\Database\BaseConnection->listTables()
+#5 /Users/argin/Documents/ODEV/admin-panel/system/Database/MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 /Users/argin/Documents/ODEV/admin-panel/system/Database/MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /Users/argin/Documents/ODEV/admin-panel/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Users/argin/Documents/ODEV/admin-panel/system/CLI/Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Users/argin/Documents/ODEV/admin-panel/system/CLI/Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 /Users/argin/Documents/ODEV/admin-panel/spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'176.232.236.130' (using password: YES) in /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(1471): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(1490): CodeIgniter\Database\BaseConnection->listTables()
+#4 /Users/argin/Documents/ODEV/admin-panel/system/Database/MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 /Users/argin/Documents/ODEV/admin-panel/system/Database/MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /Users/argin/Documents/ODEV/admin-panel/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 /Users/argin/Documents/ODEV/admin-panel/system/CLI/Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 /Users/argin/Documents/ODEV/admin-panel/system/CLI/Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(338): CodeIgniter\CLI\Console->run()
+#10 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 /Users/argin/Documents/ODEV/admin-panel/spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-05-19 00:07:05 --> mysqli_sql_exception: Table 'users' already exists in /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php(308): mysqli->query('CREATE TABLE `u...', 0)
+#1 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 /Users/argin/Documents/ODEV/admin-panel/system/Database/Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 /Users/argin/Documents/ODEV/admin-panel/app/Database/Migrations/2024-05-18-235713_User.php(32): CodeIgniter\Database\Forge->createTable('users')
+#5 /Users/argin/Documents/ODEV/admin-panel/system/Database/MigrationRunner.php(867): App\Database\Migrations\Users->up()
+#6 /Users/argin/Documents/ODEV/admin-panel/system/Database/MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /Users/argin/Documents/ODEV/admin-panel/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Users/argin/Documents/ODEV/admin-panel/system/CLI/Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Users/argin/Documents/ODEV/admin-panel/system/CLI/Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 /Users/argin/Documents/ODEV/admin-panel/spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-05-19 00:20:39 --> Error: Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+[Method: POST, Route: login/auth]
+in APPPATH/Controllers/AuthController.php on line 68.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 00:20:47 --> Error: Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+[Method: POST, Route: login/auth]
+in APPPATH/Controllers/AuthController.php on line 68.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 00:21:08 --> Error: Class "App\Controllers\App\Models\User" not found
+[Method: POST, Route: login/auth]
+in APPPATH/Controllers/AuthController.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\AuthController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 00:25:00 --> ErrorException: Undefined array key "name"
+[Method: POST, Route: register/auth]
+in APPPATH/Models/User.php on line 54.
+ 1 APPPATH/Models/User.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/Users/argin/Documents/ODEV/admin-panel/app/Models/User.php', 54)
+ 2 APPPATH/Controllers/AuthController.php(94): App\Models\User->createUser([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->doRegister()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 00:25:32 --> ErrorException: Undefined array key "name"
+[Method: POST, Route: register/auth]
+in APPPATH/Models/User.php on line 54.
+ 1 APPPATH/Models/User.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/Users/argin/Documents/ODEV/admin-panel/app/Models/User.php', 54)
+ 2 APPPATH/Controllers/AuthController.php(94): App\Models\User->createUser([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->doRegister()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 00:29:44 --> Error: Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+[Method: POST, Route: login/auth]
+in APPPATH/Controllers/AuthController.php on line 65.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 00:30:33 --> Error: Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+[Method: POST, Route: login/auth]
+in APPPATH/Controllers/AuthController.php on line 65.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 00:30:42 --> ErrorException: Undefined property: stdClass::$name
+[Method: POST, Route: login/auth]
+in APPPATH/Controllers/AuthController.php on line 71.
+ 1 APPPATH/Controllers/AuthController.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$name', '/Users/argin/Documents/ODEV/admin-panel/app/Controllers/AuthController.php', 71)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 00:31:21 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/dashboard.php on line 15.
+ 1 APPPATH/Views/dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/Users/argin/Documents/ODEV/admin-panel/app/Views/dashboard.php', 15)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/argin/Documents/ODEV/admin-panel/app/Views/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH/Controllers/AuthController.php(52): view('dashboard', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->dashboard()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 07:05:23 --> ErrorException: Undefined array key "danger"
+[Method: POST, Route: login/auth]
+in APPPATH/Controllers/AuthController.php on line 80.
+ 1 APPPATH/Controllers/AuthController.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "danger"', '/Users/argin/Documents/ODEV/admin-panel/app/Controllers/AuthController.php', 80)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 07:23:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "anasayfa.php"
+[Method: GET, Route: anasayfa]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('anasayfa.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('anasayfa', [], true)
+ 3 APPPATH/Controllers/AuthController.php(44): view('anasayfa')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->dashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 07:25:30 --> ErrorException: include(partials/menu.php): Failed to open stream: No such file or directory
+[Method: GET, Route: anasayfa]
+in APPPATH/Views/anasayfa.php on line 75.
+ 1 APPPATH/Views/anasayfa.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(partials/menu.php): Failed to open stream: No such file or directory', '/Users/argin/Documents/ODEV/admin-panel/app/Views/anasayfa.php', 75)
+ 2 APPPATH/Views/anasayfa.php(75): include()
+ 3 SYSTEMPATH/View/View.php(234): include('/Users/argin/Documents/ODEV/admin-panel/app/Views/anasayfa.php')
+ 4 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('anasayfa', [], true)
+ 6 APPPATH/Controllers/AuthController.php(44): view('anasayfa')
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->dashboard()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 07:25:45 --> ErrorException: include(app/Views/partials/menu.php): Failed to open stream: No such file or directory
+[Method: GET, Route: anasayfa]
+in APPPATH/Views/anasayfa.php on line 75.
+ 1 APPPATH/Views/anasayfa.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(app/Views/partials/menu.php): Failed to open stream: No such file or directory', '/Users/argin/Documents/ODEV/admin-panel/app/Views/anasayfa.php', 75)
+ 2 APPPATH/Views/anasayfa.php(75): include()
+ 3 SYSTEMPATH/View/View.php(234): include('/Users/argin/Documents/ODEV/admin-panel/app/Views/anasayfa.php')
+ 4 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('anasayfa', [], true)
+ 6 APPPATH/Controllers/AuthController.php(44): view('anasayfa')
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->dashboard()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 07:26:18 --> ErrorException: include(app/Views/partial/menu.php): Failed to open stream: No such file or directory
+[Method: GET, Route: anasayfa]
+in APPPATH/Views/anasayfa.php on line 75.
+ 1 APPPATH/Views/anasayfa.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(app/Views/partial/menu.php): Failed to open stream: No such file or directory', '/Users/argin/Documents/ODEV/admin-panel/app/Views/anasayfa.php', 75)
+ 2 APPPATH/Views/anasayfa.php(75): include()
+ 3 SYSTEMPATH/View/View.php(234): include('/Users/argin/Documents/ODEV/admin-panel/app/Views/anasayfa.php')
+ 4 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('anasayfa', [], true)
+ 6 APPPATH/Controllers/AuthController.php(44): view('anasayfa')
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->dashboard()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 07:30:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "anasayfa.php"
+[Method: GET, Route: anasayfa]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('anasayfa.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('anasayfa', [], true)
+ 3 APPPATH/Controllers/AuthController.php(44): view('anasayfa')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->dashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 07:42:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "anasayfa.php"
+[Method: GET, Route: anasayfa]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('anasayfa.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('anasayfa', [], true)
+ 3 APPPATH/Controllers/AuthController.php(44): view('anasayfa')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->dashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 07:49:41 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "anasayfa_user.php"
+[Method: GET, Route: anasayfa]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('anasayfa_user.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('anasayfa_user', [], true)
+ 3 APPPATH/Controllers/AuthController.php(47): view('anasayfa_user')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->dashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+ERROR - 2024-05-19 08:01:24 --> mysqli_sql_exception: Table 'mesajlar' already exists in /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php(308): mysqli->query('CREATE TABLE `m...', 0)
+#1 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `m...')
+#2 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `m...')
+#3 /Users/argin/Documents/ODEV/admin-panel/system/Database/Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `m...')
+#4 /Users/argin/Documents/ODEV/admin-panel/app/Database/Migrations/2024-05-18-235713_Mesajlar.php(31): CodeIgniter\Database\Forge->createTable('mesajlar')
+#5 /Users/argin/Documents/ODEV/admin-panel/system/Database/MigrationRunner.php(867): App\Database\Migrations\Mesajlar->up()
+#6 /Users/argin/Documents/ODEV/admin-panel/system/Database/MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /Users/argin/Documents/ODEV/admin-panel/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Users/argin/Documents/ODEV/admin-panel/system/CLI/Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Users/argin/Documents/ODEV/admin-panel/system/CLI/Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 /Users/argin/Documents/ODEV/admin-panel/spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-05-19 08:01:39 --> mysqli_sql_exception: Unknown table 'argininf1_odev.duyuru' in /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/argin/Documents/ODEV/admin-panel/system/Database/MySQLi/Connection.php(308): mysqli->query('DROP TABLE `duy...', 0)
+#1 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `duy...')
+#2 /Users/argin/Documents/ODEV/admin-panel/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `duy...')
+#3 /Users/argin/Documents/ODEV/admin-panel/system/Database/Forge.php(663): CodeIgniter\Database\BaseConnection->query('DROP TABLE `duy...')
+#4 /Users/argin/Documents/ODEV/admin-panel/app/Database/Migrations/2024-05-18-235713_Duyurular.php(37): CodeIgniter\Database\Forge->dropTable('duyuru')
+#5 /Users/argin/Documents/ODEV/admin-panel/system/Database/MigrationRunner.php(867): App\Database\Migrations\Duyuru->down()
+#6 /Users/argin/Documents/ODEV/admin-panel/system/Database/MigrationRunner.php(290): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 /Users/argin/Documents/ODEV/admin-panel/system/Commands/Database/MigrateRollback.php(87): CodeIgniter\Database\MigrationRunner->regress(1)
+#8 /Users/argin/Documents/ODEV/admin-panel/system/CLI/Commands.php(70): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 /Users/argin/Documents/ODEV/admin-panel/system/CLI/Console.php(48): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 /Users/argin/Documents/ODEV/admin-panel/system/Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 /Users/argin/Documents/ODEV/admin-panel/spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-05-19 08:08:12 --> ErrorException: include(partial/head.php): Failed to open stream: No such file or directory
+[Method: GET, Route: kullanici/ekle]
+in APPPATH/Views/kullanicilar/ekle.php on line 4.
+ 1 APPPATH/Views/kullanicilar/ekle.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(partial/head.php): Failed to open stream: No such file or directory', '/Users/argin/Documents/ODEV/admin-panel/app/Views/kullanicilar/ekle.php', 4)
+ 2 APPPATH/Views/kullanicilar/ekle.php(4): include()
+ 3 SYSTEMPATH/View/View.php(234): include('/Users/argin/Documents/ODEV/admin-panel/app/Views/kullanicilar/ekle.php')
+ 4 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('kullanicilar/ekle', [], true)
+ 6 APPPATH/Controllers/AuthController.php(164): view('kullanicilar/ekle')
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->addUserPage()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 08:08:42 --> ErrorException: include(../partial/head.php): Failed to open stream: No such file or directory
+[Method: GET, Route: kullanici/ekle]
+in APPPATH/Views/kullanicilar/ekle.php on line 4.
+ 1 APPPATH/Views/kullanicilar/ekle.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../partial/head.php): Failed to open stream: No such file or directory', '/Users/argin/Documents/ODEV/admin-panel/app/Views/kullanicilar/ekle.php', 4)
+ 2 APPPATH/Views/kullanicilar/ekle.php(4): include()
+ 3 SYSTEMPATH/View/View.php(234): include('/Users/argin/Documents/ODEV/admin-panel/app/Views/kullanicilar/ekle.php')
+ 4 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('kullanicilar/ekle', [], true)
+ 6 APPPATH/Controllers/AuthController.php(164): view('kullanicilar/ekle')
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->addUserPage()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 08:09:10 --> ErrorException: include(../partial/head.php): Failed to open stream: No such file or directory
+[Method: GET, Route: kullanici/ekle]
+in APPPATH/Views/kullanicilar/ekle.php on line 4.
+ 1 APPPATH/Views/kullanicilar/ekle.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../partial/head.php): Failed to open stream: No such file or directory', '/Users/argin/Documents/ODEV/admin-panel/app/Views/kullanicilar/ekle.php', 4)
+ 2 APPPATH/Views/kullanicilar/ekle.php(4): include()
+ 3 SYSTEMPATH/View/View.php(234): include('/Users/argin/Documents/ODEV/admin-panel/app/Views/kullanicilar/ekle.php')
+ 4 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('kullanicilar/ekle', [], true)
+ 6 APPPATH/Controllers/AuthController.php(164): view('kullanicilar/ekle')
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->addUserPage()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 08:09:15 --> ErrorException: include(../partial/head.php): Failed to open stream: No such file or directory
+[Method: GET, Route: kullanici/ekle]
+in APPPATH/Views/kullanicilar/ekle.php on line 4.
+ 1 APPPATH/Views/kullanicilar/ekle.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../partial/head.php): Failed to open stream: No such file or directory', '/Users/argin/Documents/ODEV/admin-panel/app/Views/kullanicilar/ekle.php', 4)
+ 2 APPPATH/Views/kullanicilar/ekle.php(4): include()
+ 3 SYSTEMPATH/View/View.php(234): include('/Users/argin/Documents/ODEV/admin-panel/app/Views/kullanicilar/ekle.php')
+ 4 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('kullanicilar/ekle', [], true)
+ 6 APPPATH/Controllers/AuthController.php(164): view('kullanicilar/ekle')
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->addUserPage()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 08:12:05 --> ErrorException: include(../partial/menu.php): Failed to open stream: No such file or directory
+[Method: GET, Route: kullanici/ekle]
+in APPPATH/Views/kullanicilar/ekle.php on line 48.
+ 1 APPPATH/Views/kullanicilar/ekle.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../partial/menu.php): Failed to open stream: No such file or directory', '/Users/argin/Documents/ODEV/admin-panel/app/Views/kullanicilar/ekle.php', 48)
+ 2 APPPATH/Views/kullanicilar/ekle.php(48): include()
+ 3 SYSTEMPATH/View/View.php(234): include('/Users/argin/Documents/ODEV/admin-panel/app/Views/kullanicilar/ekle.php')
+ 4 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('kullanicilar/ekle', [], true)
+ 6 APPPATH/Controllers/AuthController.php(164): view('kullanicilar/ekle')
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->addUserPage()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 09:03:48 --> ErrorException: Undefined array key "role"
+[Method: GET, Route: kullanicilar]
+in APPPATH/Controllers/AuthController.php on line 157.
+ 1 APPPATH/Controllers/AuthController.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "role"', '/Users/argin/Documents/ODEV/admin-panel/app/Controllers/AuthController.php', 157)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->addUserPage()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 09:03:51 --> ErrorException: Undefined array key "role"
+[Method: GET, Route: /]
+in APPPATH/Controllers/AuthController.php on line 247.
+ 1 APPPATH/Controllers/AuthController.php(247): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "role"', '/Users/argin/Documents/ODEV/admin-panel/app/Controllers/AuthController.php', 247)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->DemirbasPage()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 09:03:57 --> ErrorException: Undefined array key "role"
+[Method: GET, Route: /]
+in APPPATH/Controllers/AuthController.php on line 247.
+ 1 APPPATH/Controllers/AuthController.php(247): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "role"', '/Users/argin/Documents/ODEV/admin-panel/app/Controllers/AuthController.php', 247)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->DemirbasPage()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 09:19:33 --> ErrorException: Undefined array key "role"
+[Method: GET, Route: anasayfa]
+in APPPATH/Controllers/AuthController.php on line 247.
+ 1 APPPATH/Controllers/AuthController.php(247): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "role"', '/Users/argin/Documents/ODEV/admin-panel/app/Controllers/AuthController.php', 247)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->DemirbasPage()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')
+CRITICAL - 2024-05-19 09:37:14 --> ErrorException: Undefined array key "role"
+[Method: GET, Route: anasayfa]
+in APPPATH/Controllers/AuthController.php on line 276.
+ 1 APPPATH/Controllers/AuthController.php(276): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "role"', '/Users/argin/Documents/ODEV/admin-panel/app/Controllers/AuthController.php', 276)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->DemirbasPage()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/argin/Documents/ODEV/admin-panel/public/index.php')

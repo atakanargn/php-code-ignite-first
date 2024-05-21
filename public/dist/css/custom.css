@@ -1,0 +1,9 @@
+#role {
+    text-align: center;
+    font-weight: bolder;
+}
+
+#kullanicilar .header{
+    box-sizing: border-box;
+    vertical-align: middle;
+}
