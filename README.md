@@ -49,19 +49,20 @@ php spark serve
 
 ## Gereksinimler
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+PHP 8.1 veya daha yüksek bir sürüm gereklidir ve aşağıdaki eklentilerin yüklü olması gerekir:
 
 - [intl](http://php.net/manual/en/intl.requirements.php)
 - [mbstring](http://php.net/manual/en/mbstring.installation.php)
 
-> [!WARNING]
-> The end of life date for PHP 7.4 was November 28, 2022.
-> The end of life date for PHP 8.0 was November 26, 2023.
-> If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> The end of life date for PHP 8.1 will be November 25, 2024.
+> [!UYARI]
+> PHP 7.4 için yaşam sonu tarihi 28 Kasım 2022 idi.
+> PHP 8.0 için yaşam sonu tarihi 26 Kasım 2023 idi.
+> Hala PHP 7.4 veya 8.0 kullanıyorsanız, hemen yükseltme yapmalısınız.
+> PHP 8.1 için yaşam sonu tarihi 25 Kasım 2024 olacaktır.
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+Ayrıca, PHP'nizde aşağıdaki eklentilerin etkinleştirildiğinden emin olun:
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+- json (varsayılan olarak etkin - devre dışı bırakmayın)
+- MySQL kullanmayı planlıyorsanız [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
+- HTTP\CURLRequest kütüphanesini kullanmayı planlıyorsanız [libcurl](http://php.net/manual/en/curl.requirements.php)
+
